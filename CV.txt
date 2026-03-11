@@ -1,0 +1,52 @@
+PRAMOD PANDIT
+LinkedIn: https://www.linkedin.com/in/pramodpandit/ Email: pramodpandit724@gmail.com
+GitHub: https://github.com/pramodpandit72 Mobile: +91-9102369979
+SKILLS
+• Languages: Python, C++, Java, JavaScript
+• Frameworks/Library: HTML, tailwind CSS, Express, React
+• Tools/Platforms: MongoDB, PostgreSQL, Git, GitHub, Docker, Postman, Figma
+• Technical Skills: Data Structures and Algorithms, Problem-Solving, Backend Development
+• Soft Skills: Teamwork, Adaptability, Detail-oriented, Punctual, Organized
+PROJECTS
+ Project Management Website | GitHub Since January 2026
+• Building a full-stack Project Management Platform supporting multi-workspace collaboration, role-based access
+control, and hierarchical team structures for enterprise-level project organization.
+• Designing and implementing real-time analytics dashboards featuring task completion metrics, priority distribution
+charts, and overdue task tracking to provide actionable insights for project managers.
+• Architecting a scalable RESTful API with modular routing, secure authentication, event-driven background
+processing, and automated email notifications for seamless team collaboration
+Tech used: HTML, Tailwind CSS, React, Express, PostgreSQL.
+ Virtual Personal Trainer Website | GitHub November 2025
+• Developed a fitness-focused web platform that introduces users to Train Well, offering dedicated pages for trainers,
+exercises, reviews, and job opportunities in the field of fitness.
+• Designed an interactive trainer section where users can connect with professionals specializing in bodybuilding,
+strength training, and cardio based on their fitness goals.
+• Built a structured Exercise Library allowing users to explore detailed workout categories, while the Jobs section
+enables experienced individuals to apply for trainer roles directly through the platform.
+ Tech used: HTML, Tailwind CSS, React, Express, MongoDB
+TRAINING
+Frontend Development | Board Infinity | Certificate July 2025
+• Completed Frontend Development training, gaining practical experience in building responsive and user-friendly web
+interfaces for modern web applications and real-world scenarios.
+• Created multiple projects, including a personal portfolio website and a Weather Forecaster application, demonstrating
+real-world application skills through hands-on implementation and problem-solving approaches.
+• Developed expertise in designing interactive and visually appealing webpages, enhancing user experience and
+layout structuring with a strong focus on usability and consistency.
+ Tech used: HTML, tailwind CSS, JavaScript
+CERTIFICATES
+• Privacy and Security in online social media | NPTEL | Certificate April 2025
+• The Bits and Bytes of Computer Networking | Coursera | Certificate September 2024
+•Introduction to Hardware and Operating System | Coursera | Certificate September 2024
+• Fundamentals of Network Communication | Coursera | Certificate September 2024
+• Basic Python towards ML/AI | CSE Pathshala | Certificate March 2024
+ACHIEVEMENTS
+• Solved 450+ Problems on LEETCODE | Link February 2026
+• Solved 100+ Problems ON GEEKSFORGEEKS | Link February 2026
+• Earned 5-star badge on Hacker Rank for problem solving | Link November 2025
+EDUCATION
+Lovely Professional University Punjab, India
+Bachelor of Technology - Computer Science and Engineering; CGPA: 7.16 August 2023 – Present 2027
+Baldeo High School Bihar, India
+ Intermediate; Percentage: 70 March 2021
+Dayal Public School Bihar, India
+Matriculation; Percentage: 89 March 2019
