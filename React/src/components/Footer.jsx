@@ -1,5 +1,5 @@
 import { FaLinkedin, FaGithub, FaHeart } from 'react-icons/fa';
-import { SiLeetcode } from 'react-icons/si';
+import { SiLeetcode, SiGeeksforgeeks, SiHackerrank } from 'react-icons/si';
 import { Link } from 'react-scroll';
 import { socialLinks, navLinks } from '../data/portfolioData';
 
@@ -7,6 +7,8 @@ const socials = [
   { icon: <FaLinkedin size={18} />, href: socialLinks.linkedin, label: 'LinkedIn' },
   { icon: <FaGithub size={18} />, href: socialLinks.github, label: 'GitHub' },
   { icon: <SiLeetcode size={18} />, href: socialLinks.leetcode, label: 'LeetCode' },
+  { icon: <SiGeeksforgeeks size={18} />, href: socialLinks.gfg, label: 'GeeksforGeeks' },
+  { icon: <SiHackerrank size={18} />, href: socialLinks.hackerrank, label: 'HackerRank' },
 ];
 
 export default function Footer() {

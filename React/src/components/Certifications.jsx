@@ -1,5 +1,6 @@
 import { FiAward, FiCalendar } from 'react-icons/fi';
 import { certificates } from '../data/portfolioData';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const providerColors = {
   NPTEL: '#1a73e8',
@@ -8,11 +9,14 @@ const providerColors = {
 };
 
 export default function Certifications() {
+  const titleRef = useScrollAnimation();
   return (
     <section id="certifications">
       <div className="section-container">
-        <h2 className="section-title">Certificates</h2>
-        <p className="section-subtitle">Professional certifications earned</p>
+        <div ref={titleRef} className="scroll-animate">
+          <h2 className="section-title">Certificates</h2>
+          <p className="section-subtitle">Professional certifications earned</p>
+        </div>
 
         <div
           style={{

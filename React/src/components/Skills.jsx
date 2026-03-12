@@ -6,6 +6,7 @@ import {
 } from 'react-icons/si';
 import { FiCpu, FiUsers, FiTool, FiCode } from 'react-icons/fi';
 import { skills } from '../data/portfolioData';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const iconMap = {
   SiPython, SiCplusplus, SiOpenjdk, SiJavascript,
@@ -21,11 +22,14 @@ const categories = [
 ];
 
 export default function Skills() {
+  const titleRef = useScrollAnimation();
   return (
     <section id="skills" style={{ background: 'var(--bg-secondary)' }}>
       <div className="section-container">
-        <h2 className="section-title">Technical Skills</h2>
-        <p className="section-subtitle">Technologies I work with</p>
+        <div ref={titleRef} className="scroll-animate">
+          <h2 className="section-title">Technical Skills</h2>
+          <p className="section-subtitle">Technologies I work with</p>
+        </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '900px', margin: '0 auto' }}>
           {categories.map((cat) => (

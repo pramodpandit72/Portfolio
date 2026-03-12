@@ -1,12 +1,16 @@
 import { FiMapPin, FiCalendar, FiBookOpen } from 'react-icons/fi';
 import { education } from '../data/portfolioData';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 export default function Education() {
+  const titleRef = useScrollAnimation();
   return (
     <section id="education" style={{ background: 'var(--bg-secondary)' }}>
       <div className="section-container">
-        <h2 className="section-title">Education</h2>
-        <p className="section-subtitle">My academic journey</p>
+        <div ref={titleRef} className="scroll-animate">
+          <h2 className="section-title">Education</h2>
+          <p className="section-subtitle">My academic journey</p>
+        </div>
 
         <div style={{ maxWidth: '700px', margin: '0 auto', position: 'relative' }}>
           {/* Timeline Line */}

@@ -1,5 +1,6 @@
 import { FiCode, FiAward, FiBookOpen } from 'react-icons/fi';
 import { personalInfo } from '../data/portfolioData';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const stats = [
   { icon: <FiCode size={22} />, value: '450+', label: 'LeetCode Problems' },
@@ -8,10 +9,15 @@ const stats = [
 ];
 
 export default function About() {
+  const titleRef = useScrollAnimation();
+  const cardRef = useScrollAnimation();
+  const statsRef = useScrollAnimation();
   return (
     <section id="about" className="section-container">
-      <h2 className="section-title">About Me</h2>
-      <p className="section-subtitle">Get to know me a little better</p>
+      <div ref={titleRef} className="scroll-animate">
+        <h2 className="section-title">About Me</h2>
+        <p className="section-subtitle">Get to know me a little better</p>
+      </div>
 
       <div
         style={{
@@ -24,7 +30,8 @@ export default function About() {
       >
         {/* About Text */}
         <div
-          className="glass-card"
+          ref={cardRef}
+          className="glass-card scroll-animate-left"
           style={{ padding: '2rem' }}
         >
           <p
@@ -40,6 +47,8 @@ export default function About() {
 
         {/* Stats Grid */}
         <div
+          ref={statsRef}
+          className="scroll-animate"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',

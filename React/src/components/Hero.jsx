@@ -1,6 +1,6 @@
 import { FiDownload, FiArrowDown } from 'react-icons/fi';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { SiLeetcode } from 'react-icons/si';
+import { SiLeetcode, SiGeeksforgeeks, SiHackerrank } from 'react-icons/si';
 import { Link } from 'react-scroll';
 import { personalInfo, socialLinks } from '../data/portfolioData';
 
@@ -218,6 +218,8 @@ export default function Hero() {
             { icon: <FaLinkedin size={20} />, href: socialLinks.linkedin, label: 'LinkedIn' },
             { icon: <FaGithub size={20} />, href: socialLinks.github, label: 'GitHub' },
             { icon: <SiLeetcode size={20} />, href: socialLinks.leetcode, label: 'LeetCode' },
+            { icon: <SiGeeksforgeeks size={20} />, href: socialLinks.gfg, label: 'GeeksforGeeks' },
+            { icon: <SiHackerrank size={20} />, href: socialLinks.hackerrank, label: 'HackerRank' },
           ].map((social) => (
             <a
               key={social.label}

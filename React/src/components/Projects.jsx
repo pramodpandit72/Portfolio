@@ -1,12 +1,17 @@
-import { FiExternalLink, FiGithub, FiCalendar } from 'react-icons/fi';
+import { FiExternalLink, FiGithub, FiCalendar, FiGlobe } from 'react-icons/fi';
 import { projects, training } from '../data/portfolioData';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 export default function Projects() {
+  const titleRef = useScrollAnimation();
+  const trainingRef = useScrollAnimation();
   return (
     <section id="projects">
       <div className="section-container">
-        <h2 className="section-title">Projects</h2>
-        <p className="section-subtitle">Things I've built and worked on</p>
+        <div ref={titleRef} className="scroll-animate">
+          <h2 className="section-title">Projects</h2>
+          <p className="section-subtitle">Things I've built and worked on</p>
+        </div>
 
         <div
           style={{
@@ -155,34 +160,60 @@ export default function Projects() {
                 </div>
 
                 {/* Links */}
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.4rem',
-                    color: 'var(--accent-primary)',
-                    fontSize: '0.88rem',
-                    fontWeight: 500,
-                    textDecoration: 'none',
-                    transition: 'gap 0.2s ease',
-                  }}
-                  className="project-link"
-                >
-                  <FiGithub size={16} />
-                  View on GitHub
-                  <FiExternalLink size={14} />
-                </a>
+                <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.4rem',
+                      color: 'var(--accent-primary)',
+                      fontSize: '0.88rem',
+                      fontWeight: 500,
+                      textDecoration: 'none',
+                      transition: 'gap 0.2s ease',
+                    }}
+                    className="project-link"
+                  >
+                    <FiGithub size={16} />
+                    GitHub
+                    <FiExternalLink size={14} />
+                  </a>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.4rem',
+                        color: 'var(--accent-primary)',
+                        fontSize: '0.88rem',
+                        fontWeight: 500,
+                        textDecoration: 'none',
+                        transition: 'gap 0.2s ease',
+                      }}
+                      className="project-link"
+                    >
+                      <FiGlobe size={16} />
+                      Live Demo
+                      <FiExternalLink size={14} />
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Training Section */}
-        <h2 className="section-title">Training & Certifications</h2>
-        <p className="section-subtitle">Courses and training I've completed</p>
+        <div ref={trainingRef} className="scroll-animate">
+          <h2 className="section-title">Training & Certifications</h2>
+          <p className="section-subtitle">Courses and training I've completed</p>
+        </div>
 
         {training.map((item) => (
           <div

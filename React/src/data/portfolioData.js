@@ -18,6 +18,8 @@ export const socialLinks = {
   github: "https://github.com/pramodpandit72",
   email: "mailto:pramod2pandit@gmail.com",
   leetcode: "https://leetcode.com/u/PramodPandit/",
+  gfg: "https://www.geeksforgeeks.org/profile/pramodpandit",
+  hackerrank: "https://www.hackerrank.com/profile/nwdpramod1230591",
 };
 
 export const skills = {
@@ -68,6 +70,20 @@ export const projects = [
     ],
     tech: ["HTML", "Tailwind CSS", "React", "Express", "PostgreSQL"],
     github: "https://github.com/pramodpandit72",
+    live: "https://project-management-org.vercel.app/",
+    featured: true,
+  },
+  {
+    title: "Real-time Collaborative Whiteboard",
+    period: "2025",
+    description: [
+      "Built a real-time collaborative whiteboard application enabling multiple users to draw, sketch, and brainstorm together simultaneously.",
+      "Implemented WebSocket-based real-time synchronization for seamless multi-user collaboration with minimal latency.",
+      "Designed an intuitive canvas interface with drawing tools, color picker, and export functionality for enhanced user experience.",
+    ],
+    tech: ["React", "Node.js", "WebSocket", "Canvas API"],
+    github: "https://github.com/pramodpandit72",
+    live: "https://real-time-collaborative-whiteboard-lac.vercel.app/",
     featured: true,
   },
   {
@@ -80,6 +96,7 @@ export const projects = [
     ],
     tech: ["HTML", "Tailwind CSS", "React", "Express", "MongoDB"],
     github: "https://github.com/pramodpandit72",
+    live: "https://trackify-two-beta.vercel.app/",
     featured: true,
   },
 ];
@@ -119,14 +136,14 @@ export const achievements = [
     title: "GeeksforGeeks",
     stat: "100+",
     description: "Problems Solved",
-    link: "https://www.geeksforgeeks.org/",
+    link: "https://www.geeksforgeeks.org/profile/pramodpandit",
     color: "#2F8D46",
   },
   {
     title: "HackerRank",
     stat: "5★",
     description: "Problem Solving Badge",
-    link: "https://www.hackerrank.com/",
+    link: "https://www.hackerrank.com/profile/nwdpramod1230591",
     color: "#00EA64",
   },
 ];

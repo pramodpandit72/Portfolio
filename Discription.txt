@@ -1,4 +1,11 @@
 LinkedIn: https://www.linkedin.com/in/pramodpandit/ 
 GitHub: https://github.com/pramodpandit72 
-Email: pramod2pandit@gmail.com
 Leetcode: https://leetcode.com/u/PramodPandit/
+GFG: https://www.geeksforgeeks.org/profile/pramodpandit
+HackerRank: https://www.hackerrank.com/profile/nwdpramod1230591
+Email: pramod2pandit@gmail.com
+
+Projects:-
+Real-time collaborative whiteboard: https://real-time-collaborative-whiteboard-lac.vercel.app/
+Virtual Personal Trainer: https://trackify-two-beta.vercel.app/
+Project Management Platform: https://project-management-org.vercel.app/

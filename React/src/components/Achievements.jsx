@@ -1,15 +1,19 @@
 import { SiLeetcode, SiGeeksforgeeks, SiHackerrank } from 'react-icons/si';
 import { FiExternalLink } from 'react-icons/fi';
 import { achievements } from '../data/portfolioData';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const icons = { LeetCode: SiLeetcode, GeeksforGeeks: SiGeeksforgeeks, HackerRank: SiHackerrank };
 
 export default function Achievements() {
+  const titleRef = useScrollAnimation();
   return (
     <section id="achievements" style={{ background: 'var(--bg-secondary)' }}>
       <div className="section-container">
-        <h2 className="section-title">Achievements</h2>
-        <p className="section-subtitle">Competitive programming milestones</p>
+        <div ref={titleRef} className="scroll-animate">
+          <h2 className="section-title">Achievements</h2>
+          <p className="section-subtitle">Programming milestones</p>
+        </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.25rem', maxWidth: '900px', margin: '0 auto' }}>
           {achievements.map((a) => {
             const Icon = icons[a.title];
