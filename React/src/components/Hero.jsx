@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiLeetcode, SiGeeksforgeeks, SiHackerrank } from 'react-icons/si';
 import { Link } from 'react-scroll';
 import { personalInfo, socialLinks } from '../data/portfolioData';
+import profilePic from '../assets/profile_pic.jpg';
 
 export default function Hero() {
   return (
@@ -15,6 +16,7 @@ export default function Hero() {
         justifyContent: 'center',
         position: 'relative',
         overflow: 'hidden',
+        paddingTop: '5rem',
       }}
     >
       {/* Background Gradient Orbs */}
@@ -45,7 +47,6 @@ export default function Hero() {
           zIndex: 0,
         }}
         className="animate-blob"
-        style2={{ animationDelay: '2s' }}
       />
       <div
         style={{
@@ -64,82 +65,121 @@ export default function Hero() {
 
       <div
         style={{
-          maxWidth: '900px',
+          maxWidth: '1100px',
           margin: '0 auto',
           padding: '0 1.5rem',
-          textAlign: 'center',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '3rem',
           position: 'relative',
           zIndex: 1,
+          width: '100%',
         }}
+        className="hero-content"
       >
-        {/* Greeting */}
+        {/* Profile Picture - Left Side */}
         <div
-          className="animate-fade-in-up stagger-1"
+          className="animate-fade-in-up stagger-1 hero-profile"
           style={{
-            display: 'inline-block',
-            padding: '0.5rem 1.25rem',
-            borderRadius: '2rem',
-            border: '1px solid var(--border-color)',
-            background: 'var(--card-glass)',
-            backdropFilter: 'blur(10px)',
-            fontSize: '0.9rem',
-            color: 'var(--text-secondary)',
-            marginBottom: '1.5rem',
-            fontWeight: 500,
+            flexShrink: 0,
             opacity: 0,
           }}
         >
-          👋 Hello, I'm
+          <div
+            style={{
+              width: '280px',
+              height: '280px',
+              borderRadius: '50%',
+              overflow: 'hidden',
+              border: '4px solid var(--accent-primary)',
+              boxShadow: '0 0 40px var(--glow-color), 0 20px 60px rgba(0,0,0,0.15)',
+              position: 'relative',
+            }}
+            className="animate-pulse-glow"
+          >
+            <img
+              src={profilePic}
+              alt={personalInfo.name}
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                display: 'block',
+              }}
+            />
+          </div>
         </div>
 
-        {/* Name */}
-        <h1
-          className="animate-fade-in-up stagger-2"
-          style={{
-            fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
-            fontWeight: 900,
-            lineHeight: 1.1,
-            marginBottom: '1rem',
-            background: 'var(--accent-gradient)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            letterSpacing: '-0.03em',
-            opacity: 0,
-          }}
-        >
-          {personalInfo.name}
-        </h1>
+        {/* Right Side - Text Content */}
+        <div style={{ textAlign: 'left', flex: 1 }}>
+          {/* Greeting */}
+          <div
+            className="animate-fade-in-up stagger-2"
+            style={{
+              display: 'inline-block',
+              padding: '0.5rem 1.25rem',
+              borderRadius: '2rem',
+              border: '1px solid var(--border-color)',
+              background: 'var(--card-glass)',
+              backdropFilter: 'blur(10px)',
+              fontSize: '0.9rem',
+              color: 'var(--text-secondary)',
+              marginBottom: '1.5rem',
+              fontWeight: 500,
+              opacity: 0,
+            }}
+          >
+            👋 Hello, I'm
+          </div>
 
-        {/* Title */}
-        <h2
-          className="animate-fade-in-up stagger-3"
-          style={{
-            fontSize: 'clamp(1.25rem, 3vw, 1.75rem)',
-            fontWeight: 600,
-            color: 'var(--text-primary)',
-            marginBottom: '1rem',
-            opacity: 0,
-          }}
-        >
-          {personalInfo.title}
-        </h2>
+          {/* Name */}
+          <h1
+            className="animate-fade-in-up stagger-3"
+            style={{
+              fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
+              fontWeight: 900,
+              lineHeight: 1.1,
+              marginBottom: '1rem',
+              background: 'var(--accent-gradient)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              letterSpacing: '-0.03em',
+              opacity: 0,
+            }}
+          >
+            {personalInfo.name}
+          </h1>
 
-        {/* Tagline */}
-        <p
-          className="animate-fade-in-up stagger-4"
-          style={{
-            fontSize: '1.1rem',
-            color: 'var(--text-secondary)',
-            maxWidth: '600px',
-            margin: '0 auto 2.5rem',
-            lineHeight: 1.7,
-            opacity: 0,
-          }}
-        >
-          {personalInfo.tagline}. Currently pursuing {personalInfo.degree} at{' '}
-          {personalInfo.university}.
-        </p>
+          {/* Title */}
+          <h2
+            className="animate-fade-in-up stagger-4"
+            style={{
+              fontSize: 'clamp(1.25rem, 3vw, 1.75rem)',
+              fontWeight: 600,
+              color: 'var(--text-primary)',
+              marginBottom: '1rem',
+              opacity: 0,
+            }}
+          >
+            {personalInfo.title}
+          </h2>
+
+          {/* Tagline */}
+          <p
+            className="animate-fade-in-up stagger-5"
+            style={{
+              fontSize: '1.1rem',
+              color: 'var(--text-secondary)',
+              maxWidth: '600px',
+              marginBottom: '2.5rem',
+              lineHeight: 1.7,
+              opacity: 0,
+            }}
+          >
+            {personalInfo.tagline}. Currently pursuing {personalInfo.degree} at{' '}
+            {personalInfo.university}.
+          </p>
 
         {/* CTA Buttons */}
         <div
@@ -147,7 +187,7 @@ export default function Hero() {
           style={{
             display: 'flex',
             gap: '1rem',
-            justifyContent: 'center',
+            justifyContent: 'flex-start',
             flexWrap: 'wrap',
             marginBottom: '3rem',
             opacity: 0,
@@ -210,7 +250,7 @@ export default function Hero() {
           style={{
             display: 'flex',
             gap: '1rem',
-            justifyContent: 'center',
+            justifyContent: 'flex-start',
             opacity: 0,
           }}
         >
@@ -244,6 +284,7 @@ export default function Hero() {
               {social.icon}
             </a>
           ))}
+        </div>
         </div>
       </div>
 
@@ -302,6 +343,23 @@ export default function Hero() {
           border-color: var(--accent-primary) !important;
           transform: translateY(-2px) !important;
           box-shadow: 0 4px 15px var(--shadow-color) !important;
+        }
+        @media (max-width: 768px) {
+          .hero-content {
+            flex-direction: column !important;
+            text-align: center !important;
+          }
+          .hero-content > div:last-child {
+            text-align: center !important;
+          }
+          .hero-content > div:last-child > div[class*="stagger-5"],
+          .hero-content > div:last-child > div[class*="stagger-6"] {
+            justify-content: center !important;
+          }
+          .hero-profile > div {
+            width: 200px !important;
+            height: 200px !important;
+          }
         }
       `}</style>
     </section>

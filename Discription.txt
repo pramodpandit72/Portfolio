@@ -9,3 +9,4 @@ Projects:-
 Real-time collaborative whiteboard: https://real-time-collaborative-whiteboard-lac.vercel.app/
 Virtual Personal Trainer: https://trackify-two-beta.vercel.app/
 Project Management Platform: https://project-management-org.vercel.app/
+Weather-Forecaster: weather-forecaster-azure.vercel.app
