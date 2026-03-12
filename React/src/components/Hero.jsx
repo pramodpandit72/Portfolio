@@ -83,30 +83,95 @@ export default function Hero() {
           style={{
             flexShrink: 0,
             opacity: 0,
+            position: 'relative',
           }}
         >
-          <div
-            style={{
-              width: '280px',
-              height: '280px',
-              borderRadius: '50%',
+          {/* Outer rotating gradient ring */}
+          <div className="profile-ring-outer" style={{
+            width: '310px',
+            height: '310px',
+            position: 'relative',
+          }}>
+            {/* Animated spinning border */}
+            <div className="profile-spinner" style={{
+              position: 'absolute',
+              inset: 0,
+              borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
+              background: 'var(--accent-gradient)',
+              animation: 'profileMorph 8s ease-in-out infinite, profileSpin 12s linear infinite',
+              opacity: 0.8,
+            }} />
+
+            {/* Second counter-rotating ring */}
+            <div style={{
+              position: 'absolute',
+              inset: '6px',
+              borderRadius: '70% 30% 30% 70% / 70% 70% 30% 30%',
+              border: '2px dashed var(--accent-primary)',
+              animation: 'profileMorph 8s ease-in-out infinite reverse, profileSpin 18s linear infinite reverse',
+              opacity: 0.4,
+            }} />
+
+            {/* Dark background behind image */}
+            <div style={{
+              position: 'absolute',
+              inset: '12px',
+              borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
+              background: 'var(--bg-primary)',
+              animation: 'profileMorph 8s ease-in-out infinite',
+            }} />
+
+            {/* Image container with matching morph */}
+            <div style={{
+              position: 'absolute',
+              inset: '16px',
+              borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
               overflow: 'hidden',
-              border: '4px solid var(--accent-primary)',
-              boxShadow: '0 0 40px var(--glow-color), 0 20px 60px rgba(0,0,0,0.15)',
-              position: 'relative',
-            }}
-            className="animate-pulse-glow"
-          >
-            <img
-              src={profilePic}
-              alt={personalInfo.name}
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                display: 'block',
-              }}
-            />
+              animation: 'profileMorph 8s ease-in-out infinite',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.2), inset 0 0 30px rgba(0,0,0,0.1)',
+            }}>
+              <img
+                src={profilePic}
+                alt={personalInfo.name}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  display: 'block',
+                }}
+              />
+              {/* Subtle overlay gradient */}
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(160deg, transparent 40%, rgba(0,0,0,0.15) 100%)',
+                pointerEvents: 'none',
+              }} />
+            </div>
+
+            {/* Floating accent dots */}
+            <div className="profile-dot" style={{
+              position: 'absolute', top: '10%', right: '-5%',
+              width: '14px', height: '14px', borderRadius: '50%',
+              background: 'var(--accent-primary)',
+              boxShadow: '0 0 20px var(--accent-primary)',
+              animation: 'float 4s ease-in-out infinite',
+            }} />
+            <div className="profile-dot" style={{
+              position: 'absolute', bottom: '15%', left: '-3%',
+              width: '10px', height: '10px', borderRadius: '50%',
+              background: 'var(--accent-secondary)',
+              boxShadow: '0 0 15px var(--accent-secondary)',
+              animation: 'float 5s ease-in-out 1s infinite',
+            }} />
+            <div className="profile-dot" style={{
+              position: 'absolute', top: '50%', right: '-8%',
+              width: '8px', height: '8px', borderRadius: '50%',
+              background: 'var(--accent-primary)',
+              boxShadow: '0 0 12px var(--accent-primary)',
+              animation: 'float 6s ease-in-out 2s infinite',
+              opacity: 0.6,
+            }} />
           </div>
         </div>
 
@@ -329,6 +394,16 @@ export default function Hero() {
       </div>
 
       <style>{`
+        @keyframes profileMorph {
+          0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+          25% { border-radius: 58% 42% 57% 43% / 62% 55% 45% 38%; }
+          50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+          75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
+        }
+        @keyframes profileSpin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
         .cta-primary:hover {
           transform: translateY(-2px) !important;
           box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4) !important;
@@ -356,9 +431,12 @@ export default function Hero() {
           .hero-content > div:last-child > div[class*="stagger-6"] {
             justify-content: center !important;
           }
-          .hero-profile > div {
-            width: 200px !important;
-            height: 200px !important;
+          .profile-ring-outer {
+            width: 230px !important;
+            height: 230px !important;
+          }
+          .profile-dot {
+            display: none;
           }
         }
       `}</style>
