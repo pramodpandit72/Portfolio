@@ -88,10 +88,10 @@ export default function Hero() {
           }}
         >
           <div className="profile-ring-outer" style={{
-            width: '280px',
-            height: '340px',
+            width: '290px',
+            height: '360px',
             position: 'relative',
-            borderRadius: '50% / 44%',
+            borderRadius: '50%',
             background: 'var(--accent-gradient)',
             padding: '4px',
             boxShadow: '0 18px 42px var(--shadow-color)',
@@ -99,7 +99,7 @@ export default function Hero() {
             <div style={{
               width: '100%',
               height: '100%',
-              borderRadius: '50% / 44%',
+              borderRadius: '50%',
               overflow: 'hidden',
               background: 'var(--bg-card)',
             }}>
@@ -110,6 +110,7 @@ export default function Hero() {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
+                  objectPosition: 'center top',
                   display: 'block',
                 }}
               />
@@ -351,8 +352,8 @@ export default function Hero() {
             justify-content: center !important;
           }
           .profile-ring-outer {
-            width: 210px !important;
-            height: 260px !important;
+            width: 220px !important;
+            height: 280px !important;
           }
         }
       `}</style>

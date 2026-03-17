@@ -49,16 +49,17 @@ export default function Navbar() {
           >
             <span
               style={{
-                fontSize: '1.5rem',
+                fontSize: '1.3rem',
                 fontWeight: 800,
                 background: 'var(--accent-gradient)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
                 letterSpacing: '-0.02em',
+                whiteSpace: 'nowrap',
               }}
             >
-              &lt;PP /&gt;
+              Pramod Pandit
             </span>
           </Link>
 
