@@ -19,6 +19,22 @@ export default function Hero() {
         paddingTop: '5rem',
       }}
     >
+      <div className="hero-grid" />
+
+      {[...Array(9)].map((_, index) => (
+        <span
+          key={`hero-particle-${index}`}
+          className="hero-particle"
+          style={{
+            '--left': `${8 + index * 10}%`,
+            '--top': `${12 + (index % 3) * 24}%`,
+            '--size': `${4 + (index % 4) * 2}px`,
+            '--delay': `${index * 0.35}s`,
+            '--duration': `${3.8 + (index % 5) * 1.2}s`,
+          }}
+        />
+      ))}
+
       {/* Background Gradient Orbs */}
       <div
         style={{
@@ -122,7 +138,7 @@ export default function Hero() {
         <div style={{ textAlign: 'left', flex: 1 }}>
           {/* Name */}
           <h1
-            className="animate-fade-in-up stagger-3"
+            className="animate-fade-in-up stagger-3 hero-name"
             style={{
               fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
               fontWeight: 900,
@@ -141,7 +157,7 @@ export default function Hero() {
 
           {/* Title */}
           <h2
-            className="animate-fade-in-up stagger-4"
+            className="animate-fade-in-up stagger-4 hero-title"
             style={{
               fontSize: 'clamp(1.25rem, 3vw, 1.75rem)',
               fontWeight: 600,
@@ -165,7 +181,7 @@ export default function Hero() {
               opacity: 0,
             }}
           >
-            Building modern, scalable web experiences.
+            <span className="intro-reveal">Building modern, scalable web experiences.</span>
           </p>
 
           {/* Tagline */}
@@ -291,6 +307,49 @@ export default function Hero() {
       </div>
 
       <style>{`
+        @keyframes gridDrift {
+          0% {
+            transform: translate3d(0, 0, 0);
+          }
+          100% {
+            transform: translate3d(42px, 42px, 0);
+          }
+        }
+        @keyframes particleFloat {
+          0%, 100% {
+            transform: translateY(0) scale(1);
+            opacity: 0.35;
+          }
+          50% {
+            transform: translateY(-16px) scale(1.15);
+            opacity: 0.9;
+          }
+        }
+        @keyframes neonShift {
+          0%,
+          100% {
+            background-position: 0% 50%;
+            filter: drop-shadow(0 0 0 rgba(56, 189, 248, 0));
+          }
+          50% {
+            background-position: 100% 50%;
+            filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.35));
+          }
+        }
+        @keyframes holoFlicker {
+          0%, 100% { opacity: 1; }
+          48% { opacity: 0.98; }
+          50% { opacity: 0.85; }
+          52% { opacity: 1; }
+        }
+        @keyframes revealText {
+          from {
+            clip-path: inset(0 100% 0 0);
+          }
+          to {
+            clip-path: inset(0 0 0 0);
+          }
+        }
         @keyframes introGlow {
           0%, 100% {
             text-shadow: 0 0 0 rgba(56, 189, 248, 0);
@@ -300,6 +359,56 @@ export default function Hero() {
             text-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
             transform: translateY(-2px);
           }
+        }
+        .hero-grid {
+          position: absolute;
+          inset: -20%;
+          z-index: 0;
+          background-image:
+            linear-gradient(rgba(56, 189, 248, 0.11) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(34, 197, 94, 0.09) 1px, transparent 1px);
+          background-size: 42px 42px;
+          mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.65), transparent 72%);
+          animation: gridDrift 16s linear infinite;
+          pointer-events: none;
+        }
+        .hero-particle {
+          position: absolute;
+          left: var(--left);
+          top: var(--top);
+          width: var(--size);
+          height: var(--size);
+          border-radius: 999px;
+          background: radial-gradient(circle, rgba(56, 189, 248, 0.85), rgba(56, 189, 248, 0));
+          box-shadow: 0 0 18px rgba(56, 189, 248, 0.4);
+          z-index: 1;
+          animation: particleFloat var(--duration) ease-in-out infinite;
+          animation-delay: var(--delay);
+          pointer-events: none;
+        }
+        .hero-name {
+          background-size: 220% 220% !important;
+          animation: fadeInUp 0.6s ease forwards, neonShift 6s ease-in-out infinite, holoFlicker 5.5s linear infinite;
+        }
+        .hero-title {
+          position: relative;
+          display: inline-block;
+        }
+        .hero-title::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -8px;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
+          opacity: 0.65;
+          transform-origin: left;
+          animation: revealText 1.2s ease 0.9s both;
+        }
+        .intro-reveal {
+          display: inline-block;
+          animation: revealText 1.1s steps(28, end) 0.8s both;
         }
         .intro-animated {
           animation: fadeInUp 0.6s ease forwards, introGlow 3.2s ease-in-out infinite;
@@ -318,6 +427,16 @@ export default function Hero() {
           border-color: var(--accent-primary) !important;
           transform: translateY(-2px) !important;
           box-shadow: 0 4px 15px var(--shadow-color) !important;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .hero-grid,
+          .hero-particle,
+          .hero-name,
+          .hero-title::after,
+          .intro-reveal,
+          .intro-animated {
+            animation: none !important;
+          }
         }
         @media (max-width: 768px) {
           .hero-content {
