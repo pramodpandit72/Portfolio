@@ -54,7 +54,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '1.5rem', textAlign: 'center' }}>
           <p style={{ color: 'var(--text-muted)', fontSize: '0.82rem' }}>
-            © 2026 Pramod Pandit. Built with <FaHeart size={12} style={{ color: '#ef4444', verticalAlign: 'middle', margin: '0 2px' }} /> using React & Tailwind CSS
+            © 2026 Pramod Pandit.  <FaHeart size={12} style={{ color: '#ef4444', verticalAlign: 'middle', margin: '0 2px' }} />
           </p>
         </div>
       </div>
