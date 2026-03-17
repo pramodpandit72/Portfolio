@@ -28,7 +28,7 @@ export default function Hero() {
           width: '500px',
           height: '500px',
           borderRadius: '50%',
-          background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.1))',
+          background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(34, 197, 94, 0.12))',
           filter: 'blur(80px)',
           zIndex: 0,
         }}
@@ -42,7 +42,7 @@ export default function Hero() {
           width: '450px',
           height: '450px',
           borderRadius: '50%',
-          background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(168, 85, 247, 0.08))',
+          background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.14), rgba(56, 189, 248, 0.1))',
           filter: 'blur(80px)',
           zIndex: 0,
         }}
@@ -56,7 +56,7 @@ export default function Hero() {
           width: '300px',
           height: '300px',
           borderRadius: '50%',
-          background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(99, 102, 241, 0.06))',
+          background: 'linear-gradient(135deg, rgba(56, 189, 248, 0.12), rgba(34, 197, 94, 0.08))',
           filter: 'blur(60px)',
           zIndex: 0,
         }}
@@ -86,49 +86,21 @@ export default function Hero() {
             position: 'relative',
           }}
         >
-          {/* Outer rotating gradient ring */}
           <div className="profile-ring-outer" style={{
-            width: '310px',
-            height: '310px',
+            width: '280px',
+            height: '340px',
             position: 'relative',
+            borderRadius: '50% / 44%',
+            background: 'var(--accent-gradient)',
+            padding: '4px',
+            boxShadow: '0 18px 42px var(--shadow-color)',
           }}>
-            {/* Animated spinning border */}
-            <div className="profile-spinner" style={{
-              position: 'absolute',
-              inset: 0,
-              borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
-              background: 'var(--accent-gradient)',
-              animation: 'profileMorph 8s ease-in-out infinite, profileSpin 12s linear infinite',
-              opacity: 0.8,
-            }} />
-
-            {/* Second counter-rotating ring */}
             <div style={{
-              position: 'absolute',
-              inset: '6px',
-              borderRadius: '70% 30% 30% 70% / 70% 70% 30% 30%',
-              border: '2px dashed var(--accent-primary)',
-              animation: 'profileMorph 8s ease-in-out infinite reverse, profileSpin 18s linear infinite reverse',
-              opacity: 0.4,
-            }} />
-
-            {/* Dark background behind image */}
-            <div style={{
-              position: 'absolute',
-              inset: '12px',
-              borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
-              background: 'var(--bg-primary)',
-              animation: 'profileMorph 8s ease-in-out infinite',
-            }} />
-
-            {/* Image container with matching morph */}
-            <div style={{
-              position: 'absolute',
-              inset: '16px',
-              borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
+              width: '100%',
+              height: '100%',
+              borderRadius: '50% / 44%',
               overflow: 'hidden',
-              animation: 'profileMorph 8s ease-in-out infinite',
-              boxShadow: '0 20px 60px rgba(0,0,0,0.2), inset 0 0 30px rgba(0,0,0,0.1)',
+              background: 'var(--bg-card)',
             }}>
               <img
                 src={profilePic}
@@ -140,38 +112,7 @@ export default function Hero() {
                   display: 'block',
                 }}
               />
-              {/* Subtle overlay gradient */}
-              <div style={{
-                position: 'absolute',
-                inset: 0,
-                background: 'linear-gradient(160deg, transparent 40%, rgba(0,0,0,0.15) 100%)',
-                pointerEvents: 'none',
-              }} />
             </div>
-
-            {/* Floating accent dots */}
-            <div className="profile-dot" style={{
-              position: 'absolute', top: '10%', right: '-5%',
-              width: '14px', height: '14px', borderRadius: '50%',
-              background: 'var(--accent-primary)',
-              boxShadow: '0 0 20px var(--accent-primary)',
-              animation: 'float 4s ease-in-out infinite',
-            }} />
-            <div className="profile-dot" style={{
-              position: 'absolute', bottom: '15%', left: '-3%',
-              width: '10px', height: '10px', borderRadius: '50%',
-              background: 'var(--accent-secondary)',
-              boxShadow: '0 0 15px var(--accent-secondary)',
-              animation: 'float 5s ease-in-out 1s infinite',
-            }} />
-            <div className="profile-dot" style={{
-              position: 'absolute', top: '50%', right: '-8%',
-              width: '8px', height: '8px', borderRadius: '50%',
-              background: 'var(--accent-primary)',
-              boxShadow: '0 0 12px var(--accent-primary)',
-              animation: 'float 6s ease-in-out 2s infinite',
-              opacity: 0.6,
-            }} />
           </div>
         </div>
 
@@ -284,9 +225,8 @@ export default function Hero() {
             View Projects <FiArrowDown size={16} />
           </Link>
           <a
-            href={socialLinks.github}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/Pramod%20Pandit.pdf"
+            download="Pramod Pandit.pdf"
             style={{
               padding: '0.85rem 2rem',
               borderRadius: '0.75rem',
@@ -305,7 +245,7 @@ export default function Hero() {
             }}
             className="cta-secondary"
           >
-            <FaGithub size={18} /> GitHub Profile
+            <FiDownload size={18} /> Download CV
           </a>
         </div>
 
@@ -353,60 +293,10 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div
-        style={{
-          position: 'absolute',
-          bottom: '2rem',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '0.5rem',
-          color: 'var(--text-muted)',
-          fontSize: '0.8rem',
-        }}
-        className="animate-float"
-      >
-        <span>Scroll Down</span>
-        <div
-          style={{
-            width: '24px',
-            height: '40px',
-            borderRadius: '12px',
-            border: '2px solid var(--text-muted)',
-            display: 'flex',
-            justifyContent: 'center',
-            paddingTop: '8px',
-          }}
-        >
-          <div
-            style={{
-              width: '3px',
-              height: '8px',
-              borderRadius: '2px',
-              background: 'var(--accent-primary)',
-              animation: 'fadeInUp 1.5s ease-in-out infinite',
-            }}
-          />
-        </div>
-      </div>
-
       <style>{`
-        @keyframes profileMorph {
-          0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
-          25% { border-radius: 58% 42% 57% 43% / 62% 55% 45% 38%; }
-          50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
-          75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
-        }
-        @keyframes profileSpin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
         .cta-primary:hover {
           transform: translateY(-2px) !important;
-          box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4) !important;
+          box-shadow: 0 8px 30px rgba(56, 189, 248, 0.32) !important;
         }
         .cta-secondary:hover {
           border-color: var(--accent-primary) !important;
@@ -432,11 +322,8 @@ export default function Hero() {
             justify-content: center !important;
           }
           .profile-ring-outer {
-            width: 230px !important;
-            height: 230px !important;
-          }
-          .profile-dot {
-            display: none;
+            width: 210px !important;
+            height: 260px !important;
           }
         }
       `}</style>

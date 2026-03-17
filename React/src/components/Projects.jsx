@@ -1,10 +1,9 @@
 import { FiExternalLink, FiGithub, FiCalendar, FiGlobe } from 'react-icons/fi';
-import { projects, training } from '../data/portfolioData';
+import { projects } from '../data/portfolioData';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 
 export default function Projects() {
   const titleRef = useScrollAnimation();
-  const trainingRef = useScrollAnimation();
   return (
     <section id="projects">
       <div className="section-container">
@@ -42,6 +41,19 @@ export default function Projects() {
                   width: '100%',
                 }}
               />
+
+              {project.image && (
+                <img
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  style={{
+                    width: '100%',
+                    height: '180px',
+                    objectFit: 'cover',
+                    borderBottom: '1px solid var(--border-color)',
+                  }}
+                />
+              )}
 
               <div style={{ padding: '1.75rem' }}>
                 {/* Title Row */}
@@ -208,102 +220,6 @@ export default function Projects() {
             </div>
           ))}
         </div>
-
-        {/* Training Section */}
-        <div ref={trainingRef} className="scroll-animate">
-          <h2 className="section-title">Training & Certifications</h2>
-          <p className="section-subtitle">Courses and training I've completed</p>
-        </div>
-
-        {training.map((item) => (
-          <div
-            key={item.title}
-            className="glass-card"
-            style={{
-              maxWidth: '900px',
-              margin: '0 auto 1.5rem',
-              padding: '1.75rem',
-            }}
-          >
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                flexWrap: 'wrap',
-                marginBottom: '1rem',
-              }}
-            >
-              <div>
-                <h3 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--text-primary)' }}>
-                  {item.title}
-                </h3>
-                <span style={{ color: 'var(--text-muted)', fontSize: '0.88rem' }}>
-                  {item.provider} • {item.type}
-                </span>
-              </div>
-              <span
-                style={{
-                  padding: '0.3rem 0.75rem',
-                  borderRadius: '2rem',
-                  border: '1px solid var(--border-color)',
-                  color: 'var(--text-secondary)',
-                  fontSize: '0.82rem',
-                  fontWeight: 500,
-                }}
-              >
-                {item.date}
-              </span>
-            </div>
-
-            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              {item.highlights.map((point, i) => (
-                <li
-                  key={i}
-                  style={{
-                    fontSize: '0.88rem',
-                    color: 'var(--text-secondary)',
-                    lineHeight: 1.6,
-                    paddingLeft: '1rem',
-                    position: 'relative',
-                  }}
-                >
-                  <span
-                    style={{
-                      position: 'absolute',
-                      left: 0,
-                      top: '0.5em',
-                      width: '5px',
-                      height: '5px',
-                      borderRadius: '50%',
-                      background: 'var(--accent-primary)',
-                    }}
-                  />
-                  {point}
-                </li>
-              ))}
-            </ul>
-
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginTop: '1rem' }}>
-              {item.tech.map((tech) => (
-                <span
-                  key={tech}
-                  style={{
-                    padding: '0.3rem 0.7rem',
-                    borderRadius: '0.4rem',
-                    background: 'var(--glow-color)',
-                    color: 'var(--accent-primary)',
-                    fontSize: '0.75rem',
-                    fontWeight: 600,
-                    fontFamily: 'var(--font-code)',
-                  }}
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
 
         <style>{`
           .project-link:hover {

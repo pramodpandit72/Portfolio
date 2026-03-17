@@ -1,11 +1,12 @@
-import { FiAward, FiCalendar } from 'react-icons/fi';
+import { FiAward, FiCalendar, FiExternalLink } from 'react-icons/fi';
 import { certificates } from '../data/portfolioData';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const providerColors = {
-  NPTEL: '#1a73e8',
-  Coursera: '#0056d2',
-  'CSE Pathshala': '#e63946',
+  NPTEL: '#0ea5e9',
+  Coursera: '#22c55e',
+  'CSE Pathshala': '#0891b2',
+  'Board Infinity': '#16a34a',
 };
 
 export default function Certifications() {
@@ -39,6 +40,20 @@ export default function Certifications() {
                 gap: '0.75rem',
               }}
             >
+              {cert.image && (
+                <img
+                  src={cert.image}
+                  alt={`${cert.title} certificate`}
+                  style={{
+                    width: '100%',
+                    height: '150px',
+                    objectFit: 'cover',
+                    borderRadius: '0.5rem',
+                    border: '1px solid var(--border-color)',
+                  }}
+                />
+              )}
+
               <div
                 style={{
                   display: 'flex',
@@ -98,6 +113,26 @@ export default function Certifications() {
                 <FiCalendar size={13} />
                 {cert.date}
               </div>
+
+              {cert.link && (
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    marginTop: '0.35rem',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.35rem',
+                    color: 'var(--accent-primary)',
+                    fontSize: '0.82rem',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                  }}
+                >
+                  View Certificate <FiExternalLink size={13} />
+                </a>
+              )}
             </div>
           ))}
         </div>

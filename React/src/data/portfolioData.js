@@ -1,3 +1,12 @@
+import projectManagementImg from '../assets/project_management.png';
+import trackifyImg from '../assets/trackify.png';
+import frontendTrainingImg from '../assets/Frontend_devlopment.png';
+import privacySecurityImg from '../assets/NPTEL_Privacy_and_security.png';
+import bitsBytesImg from '../assets/Bits_and_bytes_of_computer_network.png';
+import hardwareOsImg from '../assets/Introduction_to_hardware_andOperating_system.png';
+import networkCommImg from '../assets/Fundamentals_of_Network_Communication.png';
+import pythonCseImg from '../assets/Python CSE pathsala.png';
+
 export const personalInfo = {
   name: "Pramod Pandit",
   title: "Full Stack Developer",
@@ -72,19 +81,7 @@ export const projects = [
     github: "https://github.com/pramodpandit72",
     live: "https://project-management-org.vercel.app/",
     featured: true,
-  },
-  {
-    title: "Real-time Collaborative Whiteboard",
-    period: "2025",
-    description: [
-      "Built a real-time collaborative whiteboard application enabling multiple users to draw, sketch, and brainstorm together simultaneously.",
-      "Implemented WebSocket-based real-time synchronization for seamless multi-user collaboration with minimal latency.",
-      "Designed an intuitive canvas interface with drawing tools, color picker, and export functionality for enhanced user experience.",
-    ],
-    tech: ["React", "Node.js", "WebSocket", "Canvas API"],
-    github: "https://github.com/pramodpandit72",
-    live: "https://real-time-collaborative-whiteboard-lac.vercel.app/",
-    featured: true,
+    image: projectManagementImg,
   },
   {
     title: "Virtual Personal Trainer",
@@ -98,30 +95,53 @@ export const projects = [
     github: "https://github.com/pramodpandit72",
     live: "https://trackify-two-beta.vercel.app/",
     featured: true,
-  },
-];
-
-export const training = [
-  {
-    title: "Frontend Development",
-    provider: "Board Infinity",
-    type: "Certificate",
-    date: "July 2025",
-    highlights: [
-      "Completed Frontend Development training, gaining practical experience in building responsive and user-friendly web interfaces.",
-      "Created multiple projects, including a personal portfolio website and a Weather Forecaster application.",
-      "Developed expertise in designing interactive and visually appealing webpages.",
-    ],
-    tech: ["HTML", "Tailwind CSS", "JavaScript"],
+    image: trackifyImg,
   },
 ];
 
 export const certificates = [
-  { title: "Privacy and Security in Online Social Media", provider: "NPTEL", date: "April 2025" },
-  { title: "The Bits and Bytes of Computer Networking", provider: "Coursera", date: "September 2024" },
-  { title: "Introduction to Hardware and Operating System", provider: "Coursera", date: "September 2024" },
-  { title: "Fundamentals of Network Communication", provider: "Coursera", date: "September 2024" },
-  { title: "Basic Python towards ML/AI", provider: "CSE Pathshala", date: "March 2024" },
+  {
+    title: "Privacy and Security in Online Social Media",
+    provider: "NPTEL",
+    date: "April 2025",
+    image: privacySecurityImg,
+    link: "https://github.com/pramodpandit72/Certifications-Certificate/blob/main/Privacy%20and%20Security%20in%20Online%20Social%20Media.pdf",
+  },
+  {
+    title: "The Bits and Bytes of Computer Networking",
+    provider: "Coursera",
+    date: "September 2024",
+    image: bitsBytesImg,
+    link: "https://github.com/pramodpandit72/Certifications-Certificate/blob/main/The%20Bits%20and%20Bytes%20of%20Computer%20Networking.pdf",
+  },
+  {
+    title: "Introduction to Hardware and Operating System",
+    provider: "Coursera",
+    date: "September 2024",
+    image: hardwareOsImg,
+    link: "https://github.com/pramodpandit72/Certifications-Certificate/blob/main/Introduction%20to%20Hardware%20and%20Operating%20System.pdf",
+  },
+  {
+    title: "Fundamentals of Network Communication",
+    provider: "Coursera",
+    date: "September 2024",
+    image: networkCommImg,
+    link: "https://github.com/pramodpandit72/Certifications-Certificate/blob/main/Fundamentals%20of%20Network%20Communication.pdf",
+  },
+  {
+    title: "Basic Python towards ML/AI",
+    provider: "CSE Pathshala",
+    date: "March 2024",
+    image: pythonCseImg,
+    link: "https://github.com/pramodpandit72/Certifications-Certificate/blob/main/Python%20CSE%20pathsala.png",
+  },
+  {
+    title: "Frontend Development",
+    provider: "Board Infinity",
+    date: "July 2025",
+    image: frontendTrainingImg,
+    link: "https://github.com/pramodpandit72/Certifications-Certificate/blob/main/Summer%20Training.pdf",
+  },
 ];
 
 export const achievements = [
