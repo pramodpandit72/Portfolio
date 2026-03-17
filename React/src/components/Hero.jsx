@@ -120,26 +120,6 @@ export default function Hero() {
 
         {/* Right Side - Text Content */}
         <div style={{ textAlign: 'left', flex: 1 }}>
-          {/* Greeting */}
-          <div
-            className="animate-fade-in-up stagger-2"
-            style={{
-              display: 'inline-block',
-              padding: '0.5rem 1.25rem',
-              borderRadius: '2rem',
-              border: '1px solid var(--border-color)',
-              background: 'var(--card-glass)',
-              backdropFilter: 'blur(10px)',
-              fontSize: '0.9rem',
-              color: 'var(--text-secondary)',
-              marginBottom: '1.5rem',
-              fontWeight: 500,
-              opacity: 0,
-            }}
-          >
-            Pramod Pandit
-          </div>
-
           {/* Name */}
           <h1
             className="animate-fade-in-up stagger-3"
