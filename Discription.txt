@@ -10,3 +10,11 @@ Real-time collaborative whiteboard: https://real-time-collaborative-whiteboard-l
 Virtual Personal Trainer: https://trackify-two-beta.vercel.app/
 Project Management Platform: https://project-management-org.vercel.app/
 Weather-Forecaster: weather-forecaster-azure.vercel.app
+
+Certificates Links on GitHub:-
+Fundamentals of Network Communication: https://github.com/pramodpandit72/Certifications-Certificate/blob/main/Fundamentals%20of%20Network%20Communication.pdf
+Introduction to Hardware and Operating System: https://github.com/pramodpandit72/Certifications-Certificate/blob/main/Introduction%20to%20Hardware%20and%20Operating%20System.pdf
+Privacy and Security in Online Social Media: https://github.com/pramodpandit72/Certifications-Certificate/blob/main/Privacy%20and%20Security%20in%20Online%20Social%20Media.pdf
+Python CSE pathsala: https://github.com/pramodpandit72/Certifications-Certificate/blob/main/Python%20CSE%20pathsala.png
+The Bits and Bytes of Computer Networking: https://github.com/pramodpandit72/Certifications-Certificate/blob/main/The%20Bits%20and%20Bytes%20of%20Computer%20Networking.pdf
+Frontend Development: https://github.com/pramodpandit72/Certifications-Certificate/blob/main/Summer%20Training.pdf
