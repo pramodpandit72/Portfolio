@@ -69,6 +69,7 @@ export default function Hero() {
           margin: '0 auto',
           padding: '0 1.5rem',
           display: 'flex',
+          flexDirection: 'row-reverse',
           alignItems: 'center',
           gap: '3rem',
           position: 'relative',
@@ -135,7 +136,7 @@ export default function Hero() {
               opacity: 0,
             }}
           >
-            👋 Hello, I'm
+            Pramod Pandit
           </div>
 
           {/* Name */}
@@ -170,6 +171,21 @@ export default function Hero() {
           >
             {personalInfo.title}
           </h2>
+
+          <p
+            className="intro-animated animate-fade-in-up stagger-5"
+            style={{
+              fontSize: '0.95rem',
+              fontWeight: 600,
+              color: 'var(--accent-primary)',
+              marginBottom: '0.9rem',
+              letterSpacing: '0.04em',
+              textTransform: 'uppercase',
+              opacity: 0,
+            }}
+          >
+            Building modern, scalable web experiences.
+          </p>
 
           {/* Tagline */}
           <p
@@ -294,6 +310,19 @@ export default function Hero() {
       </div>
 
       <style>{`
+        @keyframes introGlow {
+          0%, 100% {
+            text-shadow: 0 0 0 rgba(56, 189, 248, 0);
+            transform: translateY(0);
+          }
+          50% {
+            text-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
+            transform: translateY(-2px);
+          }
+        }
+        .intro-animated {
+          animation: fadeInUp 0.6s ease forwards, introGlow 3.2s ease-in-out infinite;
+        }
         .cta-primary:hover {
           transform: translateY(-2px) !important;
           box-shadow: 0 8px 30px rgba(56, 189, 248, 0.32) !important;
@@ -311,7 +340,7 @@ export default function Hero() {
         }
         @media (max-width: 768px) {
           .hero-content {
-            flex-direction: column !important;
+            flex-direction: column-reverse !important;
             text-align: center !important;
           }
           .hero-content > div:last-child {
