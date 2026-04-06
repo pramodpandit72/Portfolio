@@ -4,7 +4,7 @@ A modern, responsive personal portfolio website built with **React** and **Vite*
 
 ## Live Demo
 
-> _Deploy on Vercel/Netlify and add your link here._
+> https://portfolio-virid-gamma-72.vercel.app/
 
 ## Features
 
