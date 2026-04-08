@@ -79,7 +79,7 @@ export const projects = [
     ],
     tech: ["HTML", "Tailwind CSS", "React", "Express", "PostgreSQL"],
     github: "https://github.com/pramodpandit72/project-management",
-    live: "https://project-management-org.vercel.app/",
+    live: "https://project-management-three-psi.vercel.app/",
     featured: true,
     image: projectManagementImg,
   },
