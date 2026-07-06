@@ -1,18 +1,20 @@
 import {
-  SiPython, SiCplusplus, SiOpenjdk, SiJavascript,
-  SiReact, SiExpress, SiTailwindcss, SiHtml5,
-  SiMongodb, SiPostgresql, SiGit, SiGithub,
-  SiDocker, SiPostman, SiFigma,
+  SiPython, SiCplusplus, SiJavascript,
+  SiReact, SiExpress, SiTailwindcss, SiHtml5, SiNodedotjs,
+  SiMongodb, SiGit, SiGithub,
+  SiDocker, SiGithubactions, SiKubernetes, SiTerraform,
 } from 'react-icons/si';
+import { FaAws } from 'react-icons/fa';
 import { FiCpu, FiUsers, FiTool, FiCode } from 'react-icons/fi';
 import { skills } from '../data/portfolioData';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const iconMap = {
-  SiPython, SiCplusplus, SiOpenjdk, SiJavascript,
-  SiReact, SiExpress, SiTailwindcss, SiHtml5,
-  SiMongodb, SiPostgresql, SiGit, SiGithub,
-  SiDocker, SiPostman, SiFigma,
+  SiPython, SiCplusplus, SiJavascript,
+  SiReact, SiExpress, SiTailwindcss, SiHtml5, SiNodedotjs,
+  SiMongodb, SiGit, SiGithub,
+  SiDocker, SiGithubactions, SiKubernetes, SiTerraform,
+  FaAws,
 };
 
 const categories = [
