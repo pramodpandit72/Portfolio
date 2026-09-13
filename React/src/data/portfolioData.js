@@ -173,7 +173,7 @@ export const education = [
     institution: "Lovely Professional University",
     location: "Punjab, India",
     degree: "Bachelor of Technology - Computer Science and Engineering",
-    score: "CGPA: 7.29",
+    score: "CGPA: 7.32",
     period: "August 2023 – Present (2027)",
     current: true,
   },
